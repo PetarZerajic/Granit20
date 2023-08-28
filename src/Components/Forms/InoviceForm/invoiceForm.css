@@ -1,0 +1,18 @@
+.step {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+.error-message {
+  position: absolute;
+  bottom: 200px;
+  left: 250px;
+  font-size: 22px;
+  color: #b71c1c;
+}
+.multi-step {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}

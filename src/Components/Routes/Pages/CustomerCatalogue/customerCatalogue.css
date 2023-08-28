@@ -1,0 +1,21 @@
+.button-customer {
+  height: 56px;
+  width: 56px;
+  border: none;
+  border-radius: 50%;
+  background-color: #03a9f4;
+  cursor: pointer;
+}
+.button-customer::before,
+.button-customer::after {
+  content: "";
+  position: absolute;
+  width: 3.5px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  height: 22px;
+}
+
+.button-customer::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}

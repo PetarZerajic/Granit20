@@ -1,0 +1,22 @@
+.list-item-button {
+  margin-top: 30px;
+}
+
+.list-item {
+  margin-top: 15px;
+}
+.list-item-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list-item-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.item-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

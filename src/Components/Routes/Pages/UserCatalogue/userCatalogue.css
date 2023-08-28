@@ -1,0 +1,27 @@
+.button-user {
+  height: 56px;
+  width: 56px;
+  border: none;
+  border-radius: 50%;
+  background-color: #03a9f4;
+  cursor: pointer;
+}
+.button-user::before,
+.button-user::after {
+  content: "";
+  position: absolute;
+  width: 3.5px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  height: 22px;
+}
+
+.button-user::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}

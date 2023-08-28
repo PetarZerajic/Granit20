@@ -1,0 +1,52 @@
+.Card.Grid {
+  min-width: 200px;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.Card.Grid:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 12px 15px rgba(0, 0, 0, 0.4);
+}
+.Card.Grid .media {
+  height: 200px;
+}
+.Card.Grid .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.Card.Grid .action-button {
+  margin: 15px 0px 15px 0px;
+}
+
+/* List View Styles */
+.Card.List {
+  display: flex;
+  width: 600px;
+  height: 200px;
+  box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.Card.List:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 12px 15px rgba(0, 0, 0, 0.4);
+}
+.Card.List .media {
+  flex: 0 0 30%;
+  height: 200px;
+}
+.Card.List .content {
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 10px;
+}
+.Card.List .actions {
+  align-self: flex-end;
+}
+.Card.List .action-button {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,36 @@
+h1 {
+  opacity: 0.5;
+  font-size: 100px;
+  text-align: center;
+  color: grey;
+  margin-top: 100px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.button-container {
+  position: absolute;
+  bottom: 350px;
+  right: 40px;
+}
+
+.button-article {
+  height: 56px;
+  width: 56px;
+  border: none;
+  border-radius: 50%;
+  background-color: #03a9f4;
+  cursor: pointer;
+}
+
+.button-article::before,
+.button-article::after {
+  content: "";
+  position: absolute;
+  width: 3.5px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  height: 22px;
+}
+
+.button-article::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
