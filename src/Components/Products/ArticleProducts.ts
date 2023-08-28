@@ -12,7 +12,7 @@ export const articles: IArticle[] = [
     title: "Čekić",
     description: "Na stanju",
     quantity: 5,
-    price: 20,
+    price: 2000,
   },
 
   {
@@ -21,7 +21,7 @@ export const articles: IArticle[] = [
     title: "Cigla",
     description: "Na stanju",
     quantity: 10,
-    price: 22,
+    price: 520,
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const articles: IArticle[] = [
     title: "Keramičke pločice",
     description: "Na stanju",
     quantity: 20,
-    price: 32,
+    price: 1200,
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const articles: IArticle[] = [
     title: "Beli Cement",
     description: "Na stanju",
     quantity: 13,
-    price: 30,
+    price: 1500,
   },
   {
     id: 5,
@@ -45,6 +45,6 @@ export const articles: IArticle[] = [
     title: "Meki čelik",
     description: "Na stanju",
     quantity: 7,
-    price: 40,
+    price: 800,
   },
 ];
