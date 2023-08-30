@@ -135,6 +135,12 @@ export default function ArticleForm({
     });
   };
 
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (/\d/.test(event.key)) {
+      event.preventDefault();
+    }
+  };
+
   const setImageInputValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files![0];
 
@@ -211,9 +217,11 @@ export default function ArticleForm({
                   placeholder="Cigla, Drvo, Blok..."
                   name="title"
                   value={article.title}
+                  type="string"
                   required={article.title!.length === 0}
                   autoComplete="off"
                   error={article.title === undefined || article.title === ""}
+                  onKeyDown={handleOnKeyDown}
                   onChange={setArticleInputValue}
                 />
                 <TextField

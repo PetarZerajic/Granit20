@@ -172,6 +172,11 @@ export default function UserForm({
       });
     }
   };
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (/\d/.test(event.key)) {
+      event.preventDefault();
+    }
+  };
   const IsRequiredFilled = (): Boolean => {
     return (
       user.name.first !== "" &&
@@ -242,6 +247,7 @@ export default function UserForm({
                   value={user.name.first}
                   required={user.name.first.length === 0}
                   autoComplete="off"
+                  onKeyDown={handleOnKeyDown}
                   onChange={setUserInputValue}
                   error={
                     user.name.first === undefined || user.name.first === ""
@@ -255,6 +261,7 @@ export default function UserForm({
                   value={user.name.last}
                   required={user.name.last.length === 0}
                   autoComplete="off"
+                  onKeyDown={handleOnKeyDown}
                   onChange={setUserInputValue}
                   error={user.name.last === undefined || user.name.last === ""}
                 />
@@ -266,6 +273,7 @@ export default function UserForm({
                   value={user.location.street.name}
                   required={user.location.street.name.length === 0}
                   autoComplete="off"
+                  onKeyDown={handleOnKeyDown}
                   onChange={setUserInputValue}
                   error={
                     user.location.street.name === undefined ||

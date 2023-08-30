@@ -18,7 +18,7 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import { IInvoice } from "../../Models/Invoice";
 import { useSelector } from "react-redux";
 import { RootState } from "../../Redux/Store/store";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./drawerComponent.css";
 
 interface DrawerProps {
@@ -37,21 +37,10 @@ type ItemsState = {
 export default function DrawerComponent(props: DrawerProps) {
   const { isOpen, invoice, closeDrawer } = props;
 
-  const initialValues = {
+  const [openItems, setOpenItems] = useState<ItemsState>({
     price: true,
     quantity: true,
-  };
-
-  const [openItems, setOpenItems] = useState<ItemsState>(initialValues);
-
-  useEffect(() => {
-    const results = JSON.parse(localStorage.getItem("openItems") || "null");
-    if (results === null) {
-      localStorage.setItem("openItems", JSON.stringify(initialValues));
-    } else {
-      setOpenItems(results);
-    }
-  }, []);
+  });
 
   const handleToggleItems = (key: ItemsKey) => {
     setOpenItems((prevOpenItems) => ({

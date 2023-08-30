@@ -120,7 +120,11 @@ export default function CustomerForm({
       [name]: value,
     });
   };
-
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (/\d/.test(event.key)) {
+      event.preventDefault();
+    }
+  };
   const IsRequiredFilled = (): Boolean => {
     return (
       customer.name !== "" &&
@@ -166,6 +170,7 @@ export default function CustomerForm({
                   value={customer.name}
                   required={customer.name!.length === 0}
                   autoComplete="off"
+                  onKeyDown={handleOnKeyDown}
                   onChange={setCustomerInputValue}
                   error={customer.name === undefined || customer.name === ""}
                 />
@@ -177,6 +182,7 @@ export default function CustomerForm({
                   value={customer.lastName}
                   required={customer.lastName!.length === 0}
                   autoComplete="off"
+                  onKeyDown={handleOnKeyDown}
                   onChange={setCustomerInputValue}
                   error={
                     customer.lastName === undefined || customer.lastName === ""
@@ -184,7 +190,7 @@ export default function CustomerForm({
                 />
                 <TextField
                   label="Adresa"
-                  placeholder="Obilićev venac, Terazije"
+                  placeholder="Obilićev venac 18a, Terazije"
                   name="address"
                   value={customer.address}
                   required={customer.address!.length === 0}
@@ -201,6 +207,7 @@ export default function CustomerForm({
                   value={customer.presonalNumber}
                   required={customer.presonalNumber!.length === 0}
                   autoComplete="off"
+                  type="number"
                   onChange={setCustomerInputValue}
                   error={
                     customer.presonalNumber === undefined ||
@@ -214,6 +221,7 @@ export default function CustomerForm({
                   value={customer.uniqueCitizens}
                   required={customer.uniqueCitizens!.length === 0}
                   autoComplete="off"
+                  type="number"
                   onChange={setCustomerInputValue}
                   error={
                     customer.uniqueCitizens === undefined ||
