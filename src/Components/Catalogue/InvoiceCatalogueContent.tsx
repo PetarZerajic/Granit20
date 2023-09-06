@@ -26,7 +26,7 @@ export default function InvoiceCatalogueContent({
 
   return (
     <Box padding={6}>
-      <Grid container spacing={6}>
+      <Grid container spacing={4}>
         {invoices.map((invoice) => {
           return (
             <Grid key={invoice.id} item>

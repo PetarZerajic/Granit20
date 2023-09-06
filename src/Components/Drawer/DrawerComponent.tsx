@@ -67,8 +67,18 @@ export default function DrawerComponent(props: DrawerProps) {
   const quantities = invoice.articles!.map((art) => art.orderedQuantity);
   return (
     <>
-      <Drawer anchor="right" open={isOpen} hideBackdrop>
-        <Box p={2} width="250px" textAlign="center">
+      <Drawer
+        anchor="right"
+        open={isOpen}
+        hideBackdrop
+        ModalProps={{ style: { pointerEvents: "none" } }}
+      >
+        <Box
+          p={2}
+          width="250px"
+          textAlign="center"
+          sx={{ pointerEvents: "auto" }}
+        >
           <Typography variant="h5">Račun</Typography>
           {closeDrawer ? (
             <IconButton
@@ -84,6 +94,7 @@ export default function DrawerComponent(props: DrawerProps) {
               <CloseIcon />
             </IconButton>
           ) : null}
+
           <List>
             <ListItemButton className="list-item-button">
               <Grid container>

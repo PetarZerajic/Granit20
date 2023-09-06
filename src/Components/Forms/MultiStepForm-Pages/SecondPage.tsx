@@ -10,7 +10,6 @@ import TableRow from "@mui/material/TableRow";
 import { InvoiceArticle } from "../../../Models/InvoiceArticle";
 import { InvoiceData } from "../InoviceForm/InvoiceData";
 import { ChangeEvent } from "react";
-import { ICustomer } from "../../../Models/Customers";
 
 const TableInvoice = () => {
   return (
@@ -66,7 +65,7 @@ export default function SecondPage({
     display: "flex",
     flexDirection: "column",
     width: "1000px",
-    height: "400px",
+    height: "398px",
   };
   return (
     <>

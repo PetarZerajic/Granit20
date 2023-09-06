@@ -16,7 +16,7 @@ export default function UserCatalogueContent({
 
   return (
     <Box padding={6}>
-      <Grid container spacing={6}>
+      <Grid container spacing={4}>
         {usersRedux.map((user, index) => {
           return (
             <Grid key={index} item>

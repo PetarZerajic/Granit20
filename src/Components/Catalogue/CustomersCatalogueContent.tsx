@@ -19,7 +19,7 @@ export default function CustomersCatalogueContent({
 
   return (
     <Box padding={6}>
-      <Grid container spacing={6}>
+      <Grid container spacing={4}>
         {customers.map((customer) => {
           return (
             <Grid key={customer.id} item>

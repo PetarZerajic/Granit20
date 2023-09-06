@@ -10,7 +10,7 @@
   box-shadow: 6px 12px 15px rgba(0, 0, 0, 0.4);
 }
 .Card.Grid .media {
-  height: 200px;
+  height: 220px;
 }
 .Card.Grid .actions {
   display: flex;

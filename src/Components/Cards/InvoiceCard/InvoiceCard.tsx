@@ -39,7 +39,7 @@ export const InvoiceCard = ({ invoice, selectInvoice }: InvoiceCardProps) => {
     )?.title;
     return articleTitle;
   });
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const openDrawer = () => {
     setIsOpen(true);

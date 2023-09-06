@@ -17,7 +17,7 @@ export default function ArticlesCatalogueContent({
 
   return (
     <Box padding={6}>
-      <Grid container spacing={6}>
+      <Grid container spacing={4}>
         {articles.map((article) => {
           return (
             <Grid key={article.id} item>
