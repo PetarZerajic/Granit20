@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/granit20/static/css/main.d35ac3bd.css",
-    "main.js": "/granit20/static/js/main.f1649b7a.js",
+    "main.css": "/granit20/static/css/main.6be74540.css",
+    "main.js": "/granit20/static/js/main.826881a1.js",
     "static/js/787.f7a3b7dc.chunk.js": "/granit20/static/js/787.f7a3b7dc.chunk.js",
     "static/media/White cement.png": "/granit20/static/media/White cement.4810c3f1c7880f6cb437.png",
     "static/media/granit.png": "/granit20/static/media/granit.fc901d620ad1d6bbda1b.png",
@@ -11,12 +11,12 @@
     "static/media/mild-steal.jpg": "/granit20/static/media/mild-steal.0bc06d2771f6f49e691a.jpg",
     "static/media/brick.webp": "/granit20/static/media/brick.3bb6fd9d98015d6d38a9.webp",
     "index.html": "/granit20/index.html",
-    "main.d35ac3bd.css.map": "/granit20/static/css/main.d35ac3bd.css.map",
-    "main.f1649b7a.js.map": "/granit20/static/js/main.f1649b7a.js.map",
+    "main.6be74540.css.map": "/granit20/static/css/main.6be74540.css.map",
+    "main.826881a1.js.map": "/granit20/static/js/main.826881a1.js.map",
     "787.f7a3b7dc.chunk.js.map": "/granit20/static/js/787.f7a3b7dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d35ac3bd.css",
-    "static/js/main.f1649b7a.js"
+    "static/css/main.6be74540.css",
+    "static/js/main.826881a1.js"
   ]
 }
