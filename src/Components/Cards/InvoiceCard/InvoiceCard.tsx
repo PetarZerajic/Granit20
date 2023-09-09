@@ -9,13 +9,16 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../Redux/Store/store";
 import { InvoiceService } from "../../../Services/InvoiceService";
 import "./invoiceCard.css";
-import DrawerComponent from "../../Drawer/DrawerComponent";
+
 interface InvoiceCardProps {
   invoice: IInvoice;
   selectInvoice(invoice: IInvoice | null): void;
+  openDrawer(invoice: IInvoice): void;
 }
 
-export const InvoiceCard = ({ invoice, selectInvoice }: InvoiceCardProps) => {
+export const InvoiceCard = (props: InvoiceCardProps) => {
+  const { invoice, selectInvoice, openDrawer } = props;
+
   const { deleteinvoice } = InvoiceService();
   const handleDeleteInvoice = () => {
     deleteinvoice(invoice);
@@ -39,19 +42,11 @@ export const InvoiceCard = ({ invoice, selectInvoice }: InvoiceCardProps) => {
     )?.title;
     return articleTitle;
   });
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const openDrawer = () => {
-    setIsOpen(true);
-  };
-  const closeDrawer = () => {
-    setIsOpen(false);
-  };
 
   return (
     <div className="Invoice">
       <Card className="Card">
-        <CardActionArea onClick={openDrawer}>
+        <CardActionArea onClick={() => openDrawer(invoice)}>
           <CardContent>
             <Typography
               className="title"
@@ -104,12 +99,6 @@ export const InvoiceCard = ({ invoice, selectInvoice }: InvoiceCardProps) => {
           </Button>
         </CardActions>
       </Card>
-
-      <DrawerComponent
-        isOpen={isOpen}
-        invoice={invoice}
-        closeDrawer={closeDrawer}
-      />
     </div>
   );
 };

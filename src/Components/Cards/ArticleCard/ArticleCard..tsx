@@ -15,11 +15,9 @@ export interface ArticleCardProps {
   selectArticle(article: IArticle | null): void;
 }
 
-export default function ArticleCard({
-  article,
-  toggleView,
-  selectArticle,
-}: ArticleCardProps) {
+export default function ArticleCard(props: ArticleCardProps) {
+  const { toggleView, article, selectArticle } = props;
+
   const { deleteArticle } = ArticleService();
   const handleDeleteArticle = () => {
     deleteArticle(article);

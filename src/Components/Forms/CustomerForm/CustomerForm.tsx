@@ -71,12 +71,10 @@ interface CustomerFormProps {
   closeForm(): void;
 }
 
-export default function CustomerForm({
-  openForm,
-  initialCustomer,
-  handleCreateCustomerAlert,
-  closeForm,
-}: CustomerFormProps) {
+export default function CustomerForm(props: CustomerFormProps) {
+  const { openForm, initialCustomer, handleCreateCustomerAlert, closeForm } =
+    props;
+
   const [customer, setCustomer] = useState<ICustomer>(
     initialCustomer ?? {
       name: "",

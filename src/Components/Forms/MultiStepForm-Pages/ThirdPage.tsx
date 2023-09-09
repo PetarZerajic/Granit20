@@ -18,11 +18,9 @@ interface ThirdPageProps {
   totalPriceBill: number;
 }
 
-export default function ThirdPage({
-  customer,
-  totalPriceBill,
-  invoiceArticles,
-}: ThirdPageProps) {
+export default function ThirdPage(props: ThirdPageProps) {
+  const { customer, invoiceArticles, totalPriceBill } = props;
+
   const articlesFromRedux = useSelector(
     (state: RootState) => state.articles.articles
   );

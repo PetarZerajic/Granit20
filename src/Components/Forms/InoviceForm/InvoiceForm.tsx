@@ -70,13 +70,15 @@ interface InvoiceFormProps {
   closeForm(): void;
   handleCreateInvoiceAlert(): void;
 }
-export default function InvoiceForm({
-  openForm,
-  initialCustomer,
-  initialInvoice,
-  closeForm,
-  handleCreateInvoiceAlert,
-}: InvoiceFormProps) {
+export default function InvoiceForm(props: InvoiceFormProps) {
+  const {
+    openForm,
+    initialCustomer,
+    initialInvoice,
+    closeForm,
+    handleCreateInvoiceAlert,
+  } = props;
+
   const invoicesInRedux = useSelector(
     (state: RootState) => state.invoices.invoices
   );
@@ -152,7 +154,7 @@ export default function InvoiceForm({
     setRemainingQuantity(updatedRemainingQuantities);
   }, [invoiceArticles, articlesFromRedux]);
 
-  const CalculateTotalValue = () => {
+  const calculateTotalValue = () => {
     let total = 0;
     invoiceArticles.map(
       (article) => (total += article.orderedQuantity! * article.price!)
@@ -168,14 +170,14 @@ export default function InvoiceForm({
       isSuccess = await updateInvoice(
         invoice,
         invoiceArticles,
-        CalculateTotalValue
+        calculateTotalValue
       );
     } else {
       isSuccess = await addNewInvoice(
         invoice,
         customer,
         invoiceArticles,
-        CalculateTotalValue
+        calculateTotalValue
       );
     }
 
@@ -248,7 +250,7 @@ export default function InvoiceForm({
     });
   };
 
-  const totalPriceBill = CalculateTotalValue();
+  const totalPriceBill = calculateTotalValue();
   const FirstRequiredField = (): Boolean => {
     return customer.id !== 0 && customer.id !== undefined;
   };
@@ -288,7 +290,7 @@ export default function InvoiceForm({
       />,
       <SecondPage
         invoiceArticles={invoiceArticles}
-        CalculateTotalValue={CalculateTotalValue}
+        calculateTotalValue={calculateTotalValue}
         handleCreateArticle={handleCreateArticle}
         handleSelect={handleSelect}
         handleChangeQuantity={handleChangeQuantity}

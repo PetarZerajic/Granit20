@@ -49,18 +49,20 @@ interface SecondPageProps {
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     id: number
   ): void;
-  CalculateTotalValue(): number;
+  calculateTotalValue(): number;
 }
 
-export default function SecondPage({
-  invoiceArticles,
-  remainingQuantity,
-  handleCreateArticle,
-  handleRemoveArticle,
-  handleSelect,
-  handleChangeQuantity,
-  CalculateTotalValue,
-}: SecondPageProps) {
+export default function SecondPage(props: SecondPageProps) {
+  const {
+    invoiceArticles,
+    remainingQuantity,
+    handleCreateArticle,
+    handleRemoveArticle,
+    handleSelect,
+    handleChangeQuantity,
+    calculateTotalValue,
+  } = props;
+
   const paperStyle = {
     display: "flex",
     flexDirection: "column",
@@ -109,7 +111,7 @@ export default function SecondPage({
                 }}
               >
                 Ukupno:
-                {CalculateTotalValue() ? ` ${CalculateTotalValue()} din` : 0}
+                {calculateTotalValue() ? ` ${calculateTotalValue()} din` : 0}
               </span>
             </FormControl>
           </DialogContent>

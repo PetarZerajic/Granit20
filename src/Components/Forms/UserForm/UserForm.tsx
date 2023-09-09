@@ -78,12 +78,9 @@ interface UserFormProps {
   handleCreateUserAlert(): void;
   closeForm(): void;
 }
-export default function UserForm({
-  openForm,
-  initialUser,
-  handleCreateUserAlert,
-  closeForm,
-}: UserFormProps) {
+export default function UserForm(props: UserFormProps) {
+  const { openForm, initialUser, handleCreateUserAlert, closeForm } = props;
+
   const [user, setUser] = useState<IUserInfo>(
     initialUser ?? {
       id: { value: "" },

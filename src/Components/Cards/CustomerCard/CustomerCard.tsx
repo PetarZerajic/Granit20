@@ -16,11 +16,9 @@ interface CustomerCardProps {
   selectCustomer(customer: ICustomer | null): void;
 }
 
-export const CustomerCard = ({
-  toggleView,
-  customer,
-  selectCustomer,
-}: CustomerCardProps) => {
+export const CustomerCard = (props: CustomerCardProps) => {
+  const { toggleView, customer, selectCustomer } = props;
+
   const { deleteCustomer } = CustomerService();
   const handleDeleteCustomer = () => {
     deleteCustomer(customer);

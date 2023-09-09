@@ -75,12 +75,10 @@ interface ArticleFormProps {
   handleCreateArticleAlert(): void;
 }
 
-export default function ArticleForm({
-  openForm,
-  initialArticle,
-  closeForm,
-  handleCreateArticleAlert,
-}: ArticleFormProps) {
+export default function ArticleForm(props: ArticleFormProps) {
+  const { openForm, initialArticle, closeForm, handleCreateArticleAlert } =
+    props;
+
   const [article, setArticle] = useState<IArticle>(
     initialArticle ?? {
       title: "",
