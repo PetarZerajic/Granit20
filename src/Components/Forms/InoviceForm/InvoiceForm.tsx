@@ -323,12 +323,17 @@ export default function InvoiceForm(props: InvoiceFormProps) {
 
           <div className="multi-step">
             {!isFirstStep && (
-              <Button variant="outlined" onClick={back}>
+              <Button
+                className="invoice-button"
+                variant="outlined"
+                onClick={back}
+              >
                 Nazad
               </Button>
             )}
             {!isLastStep && (
               <Button
+                className="invoice-button"
                 variant="outlined"
                 onClick={next}
                 disabled={
@@ -340,7 +345,12 @@ export default function InvoiceForm(props: InvoiceFormProps) {
             )}
 
             {isLastStep && (
-              <Button variant="outlined" onClick={onSubmit} disabled={loading}>
+              <Button
+                className="invoice-button"
+                variant="outlined"
+                onClick={onSubmit}
+                disabled={loading}
+              >
                 {loading ? <Spinner size={30} /> : "Potvrdi"}
               </Button>
             )}

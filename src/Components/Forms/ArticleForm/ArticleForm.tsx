@@ -277,6 +277,7 @@ export default function ArticleForm(props: ArticleFormProps) {
                 <Button
                   sx={{
                     width: "200px",
+                    height: "35px",
                     marginTop: "10px",
                   }}
                   type="submit"

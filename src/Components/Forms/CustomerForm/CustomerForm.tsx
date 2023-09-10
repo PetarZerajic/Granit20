@@ -236,7 +236,7 @@ export default function CustomerForm(props: CustomerFormProps) {
                     `Problem sa serverom.Kupac neuspešno ${message()} `}
                 </p>
                 <Button
-                  sx={{ width: "200px", marginTop: "10px" }}
+                  sx={{ width: "200px", height: "35px", marginTop: "10px" }}
                   type="submit"
                   color="primary"
                   variant="outlined"
